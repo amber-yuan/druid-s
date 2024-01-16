@@ -18,12 +18,13 @@ Gem::Specification.new do |s|
   s.executables = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f)}
   s.require_paths = ["lib"]
   s.add_dependency "watir", "~> 7.3.0"
-  s.add_dependency "page_navigation", ">= 0.10"
 
   s.add_development_dependency "rspec", "~> 3.10"
   s.add_development_dependency "cucumber", "~> 9.0"
-  s.add_development_dependency "rack", ">= 3.0"
-  s.add_development_dependency "rackup", ">= 2.1"
   s.add_development_dependency "net-http-persistent", "~> 4.0"
+  s.add_development_dependency 'rack', '~> 3.0'
+  s.add_development_dependency 'rackup', '~> 2.1'
+
+  s.add_runtime_dependency 'page_navigation', '~> 0.10'
 
 end
